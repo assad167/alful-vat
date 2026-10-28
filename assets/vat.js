@@ -430,6 +430,7 @@
   }
   function box14Note() {
     const parts = [];
+    (D.adjustments || []).forEach(a => parts.push((a.short ? a.short + ' ' : '') + fmt(a.box14)));
     D.decisions.forEach(d => {
       const opt = d.options.find(o => o.id === A.decisionValue(d.id));
       if (opt && opt.box14) parts.push((d.short ? d.short + ' ' : '') + fmt(opt.box14));

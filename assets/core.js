@@ -217,6 +217,7 @@ const App = (() => {
 
   function box14() {
     let t = hal(state.box14extra);
+    for (const a of DATA.adjustments || []) t += hal(a.box14);
     for (const d of DATA.decisions) {
       const v = decisionValue(d.id);
       const opt = d.options.find(o => o.id === v);
