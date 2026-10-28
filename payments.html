@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>مدفوعات الربع الثالث</title>
+<meta name="description" content="كل المبالغ اللي طلعت من حساب الشركة في الربع الثالث 2026">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 4 L37 34 H3 Z' fill='%231d395e'/%3E%3Cpath d='M20 15 L29.5 31 H10.5 Z' fill='%23f0a500'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css?v=5">
+</head>
+<body>
+<div id="lock"></div>
+
+<div id="app" hidden>
+  <header class="topbar">
+    <div class="brand"><span id="logo"></span><span>مدفوعات الربع الثالث<small>يوليو – سبتمبر 2026</small></span></div>
+    <nav class="nav" aria-label="الصفحات">
+      <a href="index.html">الإقرار</a>
+      <a href="payments.html" aria-current="page">المدفوعات</a>
+    </nav>
+    <div class="tools">
+      <button class="iconbtn" id="timerBtn" type="button" aria-pressed="false"></button>
+      <button class="iconbtn" id="themeBtn" type="button" aria-label="تبديل الوضع"></button>
+    </div>
+  </header>
+
+  <main class="wrap" id="page"></main>
+
+  <footer class="foot">
+    <span id="footInfo"></span>
+    <button type="button" data-why>ليش الصفحة مصممة كذا؟</button>
+    <button type="button" id="forgetBtn">قفل الجهاز</button>
+  </footer>
+
+  <button class="memo-fab" id="memoFab" type="button" aria-expanded="false" aria-controls="memo">
+    <span id="memoIcon"></span><span class="lbl">خاطر؟</span><span class="count" id="memoCount" hidden></span>
+  </button>
+  <div class="memo" id="memo" hidden>
+    <p>جاك شي ببالك وأنت تشتغل؟ اكتبه هنا وارجع — بيكون محفوظ لين تخلص.</p>
+    <label class="sr-only" for="memoText">ملاحظات جانبية</label>
+    <textarea id="memoText" placeholder="مثال: أتأكد مين صاحب الحوالة الفلانية"></textarea>
+    <div style="margin-top:8px"><button class="btn small quiet" type="button" data-close>إغلاق <kbd>Esc</kbd></button></div>
+  </div>
+
+  <dialog id="payDlg" aria-labelledby="payDlgTitle"></dialog>
+  <dialog id="whyDlg" aria-labelledby="whyTitle">
+    <div class="dlg">
+      <h2 id="whyTitle">ليش الصفحة مصممة كذا؟</h2>
+      <div class="why"></div>
+      <div class="dlg-actions"><button class="btn" type="button" data-close>تمام</button></div>
+    </div>
+  </dialog>
+  <div class="tt" id="tt" hidden></div>
+</div>
+
+<script src="assets/data.enc.js?v=5"></script>
+<script src="assets/core.js?v=5"></script>
+<script src="assets/payments.js?v=5"></script>
+</body>
+</html>
